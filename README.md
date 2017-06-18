@@ -13,15 +13,15 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./pictures/pic1.jpg "summary"
-[image2]: ./pictures/pic2.jpg "images"
-[image3]: ./pictures/pic3.jpg "histogram"
+[image1]: ./pictures/pic1.JPG "summary"
+[image2]: ./pictures/pic2.JPG "images"
+[image3]: ./pictures/pic3.JPG "histogram"
 [image4]: ./new_picture/29.jpg "Bycicle crossing"
 [image5]: ./new_picture/30.jpg "Beware of ice/snow"
 [image6]: ./new_picture/27.jpg "Pedestrians"
 [image7]: ./new_picture/28.jpg "Children crossing"
 [image8]: ./new_picture/23.jpg "Slippery road"
-[image9]: ./pictures/pic4.jpg "softmax table"
+[image9]: ./pictures/pic4.JPG "softmax table"
 
 ## Rubric Points
 ### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
@@ -84,26 +84,26 @@ At "Model Architecture" tab, there is my code.
 
 I built my network based on LeNet-5 example from the course.
 
-My final model consisted of the following layers:
-
-| Layer         		|     Description	        					| 
+My final model consisted of the following layers:  
+  
+| Layer               		|     Description	        		                 			| 
 |:---------------------:|:---------------------------------------------:| 
-| Input         		| 32x32x1 gray image   							| 
-| Convolution 1x1     	| 1x1 stride, valid padding, outputs 32x32x32 |
-| RELU					|												|
-| Convolution 5x5					|	1x1 stride, valid padding, outputs 28x28x32 |
-| Max pooling	      	| 2x2 stride,  outputs 14x14x32 				|
-| Convolution 5x5	    | 1x1 stride, valid padding, outputs 10x10x64 |
-| RELU					|												|
-| Max pooling	      	| 2x2 stride,  outputs 5x5x64 				|
-| Dropout					|		keep_prob = 0.5										|
-| Fully connected		| input 1600  output 400		|
-| RELU					|												|
-| Dropout					|		keep_prob = 0.5										|
-| Fully connected		| input 400  output 84		|
-| RELU					|												|
-| Fully connected		| input 84  output 43		|				
-| Softmax | 	|			
+| Input               		| 32x32x1 gray image   			                  				| 
+| Convolution 1x1      	| 1x1 stride, valid padding, outputs 32x32x32   |
+| RELU			             		|						                                   						|
+| Convolution 5x5		  			|	1x1 stride, valid padding, outputs 28x28x32   |
+| Max pooling	         	| 2x2 stride,  outputs 14x14x32 			            	|
+| Convolution 5x5  	    | 1x1 stride, valid padding, outputs 10x10x64   |
+| RELU					             |					                                   							|
+| Max pooling	         	| 2x2 stride,  outputs 5x5x64               				|
+| Dropout			          		|		keep_prob = 0.5				                    						|
+| Fully connected		     | input 1600  output 400	                      	|
+| RELU		             			|						                                   						|
+| Dropout				          	|		keep_prob = 0.5		                    								|
+| Fully connected	     	| input 400  output 84		                        |
+| RELU					             |							                                   					|
+| Fully connected		     | input 84  output 43                         		|				
+| Softmax               | 	                                             |			 
  
 
 
@@ -142,8 +142,13 @@ I put 1x1 convnet at the very first filter. I was stuck at 0.88 ~ 0.90 accuracy,
 
 Here are five German traffic signs that I found on the web:
 
-![alt text][image4] ![alt text][image5] ![alt text][image6] 
-![alt text][image7] ![alt text][image8]
+| Image			           |     Image	        		                  			| 
+|:---------------------:|:---------------------------------------------:| 
+| ![alt text][image4]   		| ![alt text][image5]                   									| 
+| ![alt text][image6]    		| ![alt text][image7]                 									| 
+|  ![alt text][image8] 		|                   									| 
+
+
 
 I tried to find images with different backgrounds(sky, grass, ...) and from diffrent angles. Any kind of noises(bad quality, over or under exposed, out-focused) will affect the network.
 
@@ -164,14 +169,14 @@ The accuracy is most frequently 0.8, but sometimes 1.0 and rarely 0.6 and 0.4.
 Even though my network's prediction model on new internet images is not stable, I will continue discussing for the sake of the argument.
 At the instance below, my network mistook Pedestrians sign with General caution, and from this I can assume that my network recognizes triangle sign with one vertically long black line in the center, but it finally failed to distingush them.
 
-Here are the results of the prediction:
-| Image			        |     Prediction	        					| 
+Here are the results of the prediction:  
+| Image			              |     Prediction	        		                  			| 
 |:---------------------:|:---------------------------------------------:| 
-| Bicycles crossing   		| Bicycles crossing    									| 
-| Beware of ice/snow     			| Beware of ice/snow 										|
-| Pedestrians				| General Caution											|
-| Children crossing	      		| Children crossing					 				|
-| Slippery road			| Slippery Road      							|
+| Bicycles crossing   		| Bicycles crossing                    									| 
+| Beware of ice/snow 			| Beware of ice/snow 				                 						|
+| Pedestrians	       			| General Caution			                    								|
+| Children crossing	   	| Children crossing					 		                   		|
+| Slippery road		      	| Slippery Road                          							|
 
 
 
