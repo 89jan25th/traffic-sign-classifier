@@ -170,6 +170,7 @@ Even though my network's prediction model on new internet images is not stable, 
 At the instance below, my network mistook Pedestrians sign with General caution, and from this I can assume that my network recognizes triangle sign with one vertically long black line in the center, but it finally failed to distingush them.
 
 Here are the results of the prediction:  
+  
 | Image			              |     Prediction	        		                  			| 
 |:---------------------:|:---------------------------------------------:| 
 | Bicycles crossing   		| Bicycles crossing                    									| 
